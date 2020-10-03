@@ -1,7 +1,7 @@
 @extends('app')
 @section('page-tittle','Laravel - Bussiness and Enterprise Software for Civil Engg')
 @section('page-container')
-<div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed main-content-narrow">
+<div id="page-container" class="sidebar-o sidebar-light enable-page-overlay side-scroll page-header-fixed main-content-narrow">
      
      <!-- Side Overlay-->
      @include('components.page-components.side_overlay')
@@ -26,7 +26,7 @@
                               Admin Dashboard
                          </h1>
                          <h2 class="h6 font-w500 text-muted mb-0">
-                              Welcome <a class="font-w600" href="javascript:void(0)">Adam</a>, everything looks great.
+                              Welcome <a class="font-w600" href="javascript:void(0)">{{ Auth::user()->name }}</a>, everything looks great.
                          </h2>
                     </div>
                     <div class="mt-3 mt-sm-0 ml-sm-3">

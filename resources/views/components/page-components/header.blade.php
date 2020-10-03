@@ -35,8 +35,7 @@
                </div>
                <!-- END Right Section -->
           @else
-              {{-- else -> tampilakn sisi kanan kiri --}}
-               <!-- Left Section -->
+               <!-- Left Section Full -->
                <div class="d-flex align-items-center">
                     <!-- Toggle Sidebar -->
                     <!-- Layout API, functionality initialized in Template._uiApiLayout()-->
@@ -116,7 +115,7 @@
                               <div class="p-3 text-center bg-primary-dark rounded-top">
                                    <img class="img-avatar img-avatar48 img-avatar-thumb" src="{{asset('src/assets/media/avatars/avatar10.jpg')}}" alt="">
                                    <p class="mt-2 mb-0 text-white font-w500">{{ Auth::user()->name }}</p>
-                                   <p class="mb-0 text-white-50 font-size-sm">Web Developer</p>
+                                   <p class="mb-0 text-white-50 font-size-sm">{{ Auth::user()->email }}</p>
                               </div>
                               <div class="p-2">
                                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="be_pages_generic_inbox.html">
@@ -131,18 +130,17 @@
                                    <span class="font-size-sm font-w500">Settings</span>
                                    </a>
                                    <div role="separator" class="dropdown-divider"></div>
-                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="op_auth_lock.html">
+                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
                                    <span class="font-size-sm font-w500">Lock Account</span>
                                    </a>
-                                   <a class="dropdown-item d-flex align-items-center justify-content-between" href="op_auth_signin.html">
-                                   <span class="{{ route('logout') }}" 
-                                        onclick="event.preventDefault();
-                                                       document.getElementById('logout-form').submit();">
-                                             {{ __('Logout') }}>Log Out</span>
-                                   </a>
-                                   <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                   @csrf
-                                   </form>
+                                   <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        <span class="font-size-sm font-w500">{{ __('Logout') }}</span>
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
                               </div>
                          </div>
                          <!-- Authentication Links -->

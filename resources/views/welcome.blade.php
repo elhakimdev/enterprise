@@ -7,19 +7,13 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                    <!-- Side Overlay-->
-                    @include('components.page-components.side_overlay')
-                    <!-- END Side Overlay -->
+                        <!-- Side Overlay-->
+                        @include('components.page-components.side_overlay')
+                        <!-- END Side Overlay -->
 
-                    <!-- Header -->
-                    @include('components.page-components.header')
-                    <!-- END Header -->
-
-                    {{-- <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif --}}
+                        <!-- Header -->
+                        @include('components.page-components.header')
+                        <!-- END Header -->
                     
                     @endauth
                 </div>
