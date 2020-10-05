@@ -1,13 +1,23 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## About this
+latihan membuat project dengan laravel
+--> Laravel Basic learning
+--> Setup project
+--> setup && configure asset
+--> setup config Database, Migrations, Models
+--> setup controller
+--> setup Auth && Implement Laravel Spatie Role Permissions
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
 
-## Step Of Development
+
+
 ## To-Do
+--> 1. set-up master data for all administration address of indonesia
+--> 2. create transaction to learn How to Use relation Between Table on Laravel(Case Study : Relation Beetwen Administration Addr & All of Parts)
+
+
 ## Done
+--> 1. import master administration addr. of indonesia
+
 ## Contribution
+feel free to accept your cintribution in my project
+better thanks !!

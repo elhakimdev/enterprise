@@ -10,4 +10,8 @@ class Regencie extends Model
     public function province(){
         return $this->belongsTo('App\Models\Locations\Province');
     }
+    // Regencie Has Many District
+    public function districts(){
+        return $this->hasMany('App\Models\Locations\Ditrict');
+    }
 }

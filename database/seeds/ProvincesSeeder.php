@@ -4,7 +4,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Database\Seeder;
 use App\Models\Locations\Province;
 
-class ProvinceSeeder extends Seeder
+class ProvincesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
