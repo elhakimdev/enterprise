@@ -11,6 +11,7 @@
         <!-- Start Page Container -->
         @include('components.__meta')
         <!-- Start Page Container -->
+        {{-- @livewireStyles --}}
     </head>
     <body>
         
@@ -30,6 +31,6 @@
         <!-- Custom JS Page Plugins -->
         @yield('custom-js-page')
         <!-- Start Page Container -->
-
+        {{-- @livewireScripts --}}
     </body>
 </html>

@@ -17,6 +17,7 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "v2.4.1",
         "laravelcollective/html": "^6.2",
+        "livewire/livewire": "^2.2",
         "maatwebsite/excel": "^3.1",
         "nesbot/carbon": "^2.40",
         "spatie/laravel-permission": "^3.17"
