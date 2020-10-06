@@ -2,10 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Locations\District;
+use App\Models\Locations\Province;
+use App\Models\Locations\Regencie;
+use App\Models\Locations\Village;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    public $province;
+    public $regencie;
+    public $district;
+    public $village;
+
     /**
      * Create a new controller instance.
      *
@@ -23,6 +32,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        $this->province = Province::All()->count();
+        $this->regencie = Regencie::All()->count();
+        $this->district = District::All()->count();
+        $this->village = Village::All()->count();
+        return view('dashboard',[
+            'province'=> $this->province,
+            'regencie' => $this->regencie,
+            'district' => $this->district,
+            'village' => $this->village,
+            ]);
     }
 }

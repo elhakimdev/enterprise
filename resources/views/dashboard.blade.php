@@ -22,9 +22,18 @@
           <div class="content content-full">
                <div class="d-flex flex-column flex-sm-row justify-content-sm-between align-items-sm-center py-2 text-center text-sm-left">
                     <div class="flex-sm-fill">
-                         <h1 class="h3 font-w700 mb-2">
-                              Admin Dashboard
-                         </h1>
+                         @if (session('status'))
+                         <div class="alert alert-success" role="alert">
+                              <h1 class="h3 font-w700 mb-2">
+                                   Hello {{ session('status') }}
+                              </h1>
+                         </div>
+                         @endif
+                         <div>
+                              <h1 class="h3 font-w700 mb-2">
+                              {{ __('You are logged in!') }}
+                              </h1>
+                         </div>
                          <h2 class="h6 font-w500 text-muted mb-0">
                               Welcome <a class="font-w600" href="javascript:void(0)">{{ Auth::user()->name }}</a>, everything looks great.
                          </h2>
@@ -62,16 +71,16 @@
                     <div class="block block-rounded d-flex flex-column">
                          <div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
                               <dl class="mb-0">
-                              <dt class="font-size-h2 font-w700">32</dt>
-                              <dd class="text-muted mb-0">Pending Orders</dd>
+                              <dt class="font-size-h2 font-w700">{{ $province }}</dt>
+                              <dd class="text-muted mb-0">Provinces</dd>
                               </dl>
                               <div class="item item-rounded bg-body">
-                              <i class="fa fa-shopping-cart font-size-h3 text-primary"></i>
+                              <i class="fa fa-chart-line font-size-h3 text-primary"></i>
                               </div>
                          </div>
                          <div class="block-content block-content-full block-content-sm bg-body-light font-size-sm">
                               <a class="font-w500 d-flex align-items-center" href="javascript:void(0)">
-                              View all orders
+                              View all Provinces
                               <i class="fa fa-arrow-alt-circle-right ml-1 opacity-25 font-size-base"></i>
                               </a>
                          </div>
@@ -83,17 +92,17 @@
                     <div class="block block-rounded d-flex flex-column">
                          <div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
                               <dl class="mb-0">
-                              <dt class="font-size-h2 font-w700">124</dt>
-                              <dd class="text-muted mb-0">New Customers</dd>
+                              <dt class="font-size-h2 font-w700">{{ $regencie }}</dt>
+                              <dd class="text-muted mb-0">Regencies</dd>
                               </dl>
                               <div class="item item-rounded bg-body">
-                              <i class="fa fa-users font-size-h3 text-primary"></i>
+                              <i class="fa fa-chart-line font-size-h3 text-primary"></i>
                               </div>
                          </div>
                          <div class="block-content block-content-full block-content-sm bg-body-light font-size-sm">
                               <a class="font-w500 d-flex align-items-center" href="javascript:void(0)">
-                              View all customers
-                              <i class="fa fa-arrow-alt-circle-right ml-1 opacity-25 font-size-base"></i>
+                              View all Regencies
+                              <i class="fa fa-chart-line ml-1 opacity-25 font-size-base"></i>
                               </a>
                          </div>
                     </div>
@@ -104,16 +113,16 @@
                     <div class="block block-rounded d-flex flex-column">
                          <div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
                               <dl class="mb-0">
-                              <dt class="font-size-h2 font-w700">45</dt>
-                              <dd class="text-muted mb-0">Messages</dd>
+                              <dt class="font-size-h2 font-w700">{{ $district }}</dt>
+                              <dd class="text-muted mb-0">Districts</dd>
                               </dl>
                               <div class="item item-rounded bg-body">
-                              <i class="fa fa-inbox font-size-h3 text-primary"></i>
+                              <i class="fa fa-chart-line font-size-h3 text-primary"></i>
                               </div>
                          </div>
                          <div class="block-content block-content-full block-content-sm bg-body-light font-size-sm">
                               <a class="font-w500 d-flex align-items-center" href="javascript:void(0)">
-                              View all messages
+                              View all Districts
                               <i class="fa fa-arrow-alt-circle-right ml-1 opacity-25 font-size-base"></i>
                               </a>
                          </div>
@@ -125,8 +134,8 @@
                     <div class="block block-rounded d-flex flex-column">
                          <div class="block-content block-content-full flex-grow-1 d-flex justify-content-between align-items-center">
                               <dl class="mb-0">
-                              <dt class="font-size-h2 font-w700">4.5%</dt>
-                              <dd class="text-muted mb-0">Conversion Rate</dd>
+                              <dt class="font-size-h2 font-w700">{{ $village }}</dt>
+                              <dd class="text-muted mb-0">Villages</dd>
                               </dl>
                               <div class="item item-rounded bg-body">
                               <i class="fa fa-chart-line font-size-h3 text-primary"></i>
@@ -134,7 +143,7 @@
                          </div>
                          <div class="block-content block-content-full block-content-sm bg-body-light font-size-sm">
                               <a class="font-w500 d-flex align-items-center" href="javascript:void(0)">
-                              View statistics
+                              View All Villages
                               <i class="fa fa-arrow-alt-circle-right ml-1 opacity-25 font-size-base"></i>
                               </a>
                          </div>

@@ -9,14 +9,16 @@
         <title>@yield('page-tittle')</title>
 
         <!-- Start Page Container -->
-        @include('components.__meta')
+        @include('components.__meta')  
         <!-- Start Page Container -->
-        {{-- @livewireStyles --}}
+        <livewire:styles />
+        <livewire:scripts />
+        <script src="{{ mix('js/app.js') }}"></script>
     </head>
     <body>
         
         <!-- Page loader (functionality is initialized in Template._uiHandlePageLoader()) -->
-        <div id="page-loader" class="show"></div>
+        {{-- <div id="page-loader" class="show"></div> --}}
         <!-- If #page-loader markup and also the "show" class is added, the loading screen will be enabled and auto hide once the page loads -->
 
 
@@ -31,6 +33,6 @@
         <!-- Custom JS Page Plugins -->
         @yield('custom-js-page')
         <!-- Start Page Container -->
-        {{-- @livewireScripts --}}
+        
     </body>
 </html>
