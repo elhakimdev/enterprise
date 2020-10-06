@@ -90,13 +90,13 @@
                                         <span class="font-size-sm font-w600 px-2 py-1 rounded  bg-success-light text-success">Actived</span>
                                 </td>
                                 <td class="d-none d-xl-table-cell text-center font-size-sm">
-                                        <a class="font-w600" href="javascript:void(0)">7</a>
+                                <a class="font-w600"></a>
                                 </td>
                                 <td class="d-none d-sm-table-cell text-center">
-                                        <span class="font-size-sm font-w600 px-2 py-1 rounded bg-body-dark">3%</span>
+                                        <span class="font-size-sm font-w600 px-2 py-1 rounded bg-body-dark"></span>
                                 </td>
                                 <td class="d-none d-sm-table-cell text-right font-size-sm">
-                                        <strong>$26,52</strong>
+                                        <strong></strong>
                                 </td>
                             </tr>
                             @endforeach
