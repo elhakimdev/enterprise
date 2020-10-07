@@ -169,6 +169,7 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
         
 
         /*
@@ -237,6 +238,7 @@ return [
         'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
         'Form'=>Collective\Html\FormFacade::class,
         'Html'=>Collective\Html\HtmlFacade::class,
+        'DataTables'=>Yajra\DataTables\DataTablesServiceProvider::class,
 
     ],
 
