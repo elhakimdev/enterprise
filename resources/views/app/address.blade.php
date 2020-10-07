@@ -1,7 +1,7 @@
-@extends('app')
+@extends('master.app')
 @section('page-tittle','Laravel - Bussiness and Enterprise Software for Civil Engg')
 @section('page-container')
-<div id="page-container" class="sidebar-o sidebar-light enable-page-overlay side-scroll page-header-fixed main-content-narrow">
+<div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed main-content-narrow">
      
      <!-- Side Overlay-->
      @include('components.page-components.side_overlay')
@@ -62,9 +62,9 @@
           </div>
           <!-- END Hero -->
 
-          <!-- Page Content -->
+          <!-- Page Use Livewire Component -->
           @livewire('address-index')
-          <!-- END Page Content -->
+          <!-- test livewire-->
      </main>
      <!-- END Main Container -->
 

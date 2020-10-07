@@ -36,7 +36,7 @@ class HomeController extends Controller
         $this->regencie = Regencie::All()->count();
         $this->district = District::All()->count();
         $this->village = Village::All()->count();
-        return view('dashboard',[
+        return view('app.dashboard',[
             'province'=> $this->province,
             'regencie' => $this->regencie,
             'district' => $this->district,
