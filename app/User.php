@@ -7,6 +7,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\hasRoles;
 
+/**
+ * Class User
+ * 
+ * This is Class handler for Users table, This Class was extended from use Illuminate\Foundation\Auth\User as Authenticatable, all method and attribute was ready provided by use Illuminate\Foundation\Auth\User as Authenticatable class and can be implement it in this class
+ */
 class User extends Authenticatable
 {
     use Notifiable, hasRoles;

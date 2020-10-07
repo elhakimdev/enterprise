@@ -1,4 +1,4 @@
-@extends('app')
+@extends('master.app')
 @section('page-tittle','Auth - Bussiness and Enterprise Software for Civil Engg')
 @section('page-container')
 <div id="page-container" class="page-header-fixed">
