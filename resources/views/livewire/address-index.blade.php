@@ -3,7 +3,7 @@
         <!-- List Of Anythings Table -->
         <div class="block block-rounded">
             <div class="block-header block-header-default">
-                    <h3 class="block-title">Recent Orders</h3>
+                    <h3 class="block-title">List All Province</h3>
                     <div class="block-options">
                         <button type="button" class="btn btn-sm btn-alt-primary" data-toggle="class-toggle" data-target="#one-dashboard-search-orders" data-class="d-none">
                             <i class="fa fa-search"></i>
@@ -65,19 +65,19 @@
                         <table class="table table-borderless table-striped table-vcenter">
                             <thead>
                             <tr>
-                                <th class="text-center" style="width: 120px;">No.</th>
+                                <th class="text-left" style="width: 100px;">No.</th>
                                 <th class="d-none d-sm-table-cell">Code</th>
                                 <th class="d-none d-xl-table-cell">Name</th>
                                 <th>Status</th>
                                 <th class="d-none d-xl-table-cell text-center">Regencies</th>
-                                <th class="d-none d-sm-table-cell text-center">District</th>
-                                <th class="d-none d-sm-table-cell text-right">Vilages</th>
+                                <th class="d-none d-sm-table-cell text-center">Created</th>
+                                <th class="d-none d-sm-table-cell text-right">Action</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach ($data as $province)
                             <tr>
-                                <td class="text-center font-size-sm">
+                                <td class="text-left font-size-sm">
                                         <a class="font-w600" href="javascript:void(0)">
                                             <strong>{{$loop->iteration}}</strong>
                                         </a>
@@ -90,13 +90,13 @@
                                         <span class="font-size-sm font-w600 px-2 py-1 rounded  bg-success-light text-success">Actived</span>
                                 </td>
                                 <td class="d-none d-xl-table-cell text-center font-size-sm">
-                                <a class="font-w600"></a>
+                                <a class="font-w600">{{$province->regencies()->count()}}</a>
                                 </td>
                                 <td class="d-none d-sm-table-cell text-center">
-                                        <span class="font-size-sm font-w600 px-2 py-1 rounded bg-body-dark"></span>
+                                        <span class="font-size-sm font-w600 px-2 py-1 rounded bg-body-dark">{{$province->created_at->diffForHumans()}}</span>
                                 </td>
                                 <td class="d-none d-sm-table-cell text-right font-size-sm">
-                                        <strong></strong>
+                                        <strong>Action</strong>
                                 </td>
                             </tr>
                             @endforeach

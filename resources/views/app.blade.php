@@ -11,28 +11,25 @@
         <!-- Start Page Container -->
         @include('components.__meta')  
         <!-- Start Page Container -->
+
+        <!-- Start Livewire-->
         <livewire:styles />
         <livewire:scripts />
         <script src="{{ mix('js/app.js') }}"></script>
+        <!-- End Livewire-->
+
     </head>
     <body>
-        
-        <!-- Page loader (functionality is initialized in Template._uiHandlePageLoader()) -->
-        {{-- <div id="page-loader" class="show"></div> --}}
-        <!-- If #page-loader markup and also the "show" class is added, the loading screen will be enabled and auto hide once the page loads -->
-
-
         <!-- Start Page Container -->       
         @yield('page-container')
-        <!-- END Page Container -->
+        <!-- End Page Container -->
 
-        <!-- Start Page Container -->
+        <!-- Start Page Plugins -->
         @include('components.plugins.js.core')
-        <!-- Start Page Container -->
+        <!-- End Page Plugins -->
 
         <!-- Custom JS Page Plugins -->
         @yield('custom-js-page')
-        <!-- Start Page Container -->
-        
+        <!-- End Custom JS Page Plugin -->
     </body>
 </html>
